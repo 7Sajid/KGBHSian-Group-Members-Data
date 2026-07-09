@@ -63,6 +63,7 @@ export default function Directory() {
               <div className="m-row"><span className="k">Designation</span><span>{m.employment}</span></div>
               <div className="m-row"><span className="k">Blood Group</span><span>{m.blood}</span></div>
               {m.location && <div className="m-row"><span className="k">Location</span><span>{m.location}</span></div>}
+              {m.phone && <div className="m-row"><span className="k">Phone</span><span>{m.phone}</span></div>}
             </div>
           ))}
         </div>

@@ -46,7 +46,8 @@ async function insertMember(member) {
 async function listMembersPublic() {
   const col = await connect();
   const rows = await col
-    .find({}, { projection: { _id: 0, name: 1, id: 1, batch: 1, employment: 1, blood: 1, location: 1, submittedAt: 1 } })
+  
+    .find({}, { projection: { _id: 0, name: 1, id: 1, batch: 1, employment: 1, blood: 1, location: 1, phone: 1, submittedAt: 1 } })
     .sort({ submittedAt: -1 })
     .toArray();
   return rows.map((r) => ({ ...r, submitted_at: r.submittedAt }));
